@@ -36,7 +36,7 @@ export const BASETEN_MODEL_CATALOG = [
     name: "DeepSeek V3.1",
     reasoning: false,
     input: ["text"] as const,
-    contextWindow: 164000,
+    contextWindow: 163840,
     maxTokens: 8192,
   },
   {
@@ -44,7 +44,7 @@ export const BASETEN_MODEL_CATALOG = [
     name: "DeepSeek V3 0324",
     reasoning: false,
     input: ["text"] as const,
-    contextWindow: 164000,
+    contextWindow: 163840,
     maxTokens: 8192,
   },
 
@@ -68,16 +68,6 @@ export const BASETEN_MODEL_CATALOG = [
   {
     id: "moonshotai/Kimi-K2-Instruct-0905",
     name: "Kimi K2 Instruct 0905",
-    reasoning: false,
-    input: ["text"] as const,
-    contextWindow: 128000,
-    maxTokens: 8192,
-  },
-
-  // Qwen models
-  {
-    id: "Qwen/Qwen3-Coder-480B-A35B-Instruct",
-    name: "Qwen3 Coder 480B A35B Instruct",
     reasoning: false,
     input: ["text"] as const,
     contextWindow: 262000,

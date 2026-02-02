@@ -383,8 +383,12 @@ export async function applyNonInteractiveAuthChoice(params: {
       envVar: "BASETEN_API_KEY",
       runtime,
     });
-    if (!resolved) return null;
-    if (resolved.source !== "profile") await setBasetenApiKey(resolved.key);
+    if (!resolved) {
+      return null;
+    }
+    if (resolved.source !== "profile") {
+      await setBasetenApiKey(resolved.key);
+    }
     nextConfig = applyAuthProfileConfig(nextConfig, {
       profileId: "baseten:default",
       provider: "baseten",
