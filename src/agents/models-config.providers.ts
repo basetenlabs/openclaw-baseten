@@ -453,7 +453,7 @@ export async function resolveImplicitProviders(params: {
   }
 
   const basetenKey =
-    resolveEnvApiKeyVarName("baseten") ??
+    resolveEnvApiKey("baseten")?.apiKey ??
     resolveApiKeyFromProfiles({ provider: "baseten", store: authStore });
   if (basetenKey) {
     providers.baseten = { ...buildBasetenProvider(), apiKey: basetenKey };
